@@ -6,6 +6,8 @@ import android.util.AttributeSet
 import android.widget.FrameLayout
 import com.aafaq.trails.data.deligates.ITrailableHelper
 import com.aafaq.trails.data.deligates.TrailableImp
+import com.aafaq.trails.data.models.StartTrailing
+import com.aafaq.trails.data.models.TrailConfig
 
 class TrailedView @JvmOverloads constructor(
     context: Context,
@@ -14,9 +16,7 @@ class TrailedView @JvmOverloads constructor(
 
     private val trailAbleImp: TrailableImp = TrailableImp()
 ) : FrameLayout(context, attrs, defStyleAttr), ITrailableHelper by trailAbleImp{
-    init {
-        val visibilityRect = Rect().apply {
-            getLocalVisibleRect(this)
-        }
+    fun getPositionOnScreen() = Rect().apply {
+        getLocalVisibleRect(this)
     }
 }
