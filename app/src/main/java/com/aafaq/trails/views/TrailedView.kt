@@ -6,8 +6,6 @@ import android.util.AttributeSet
 import android.widget.FrameLayout
 import com.aafaq.trails.data.deligates.ITrailableHelper
 import com.aafaq.trails.data.deligates.TrailableImp
-import com.aafaq.trails.data.models.StartTrailing
-import com.aafaq.trails.data.models.TrailConfig
 
 class TrailedView @JvmOverloads constructor(
     context: Context,
